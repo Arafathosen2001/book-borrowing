@@ -1,14 +1,26 @@
 "use client";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { authClient } from "../../lib/auth-client";
 
 const SignUpPage = () => {
-    const onSubmit = (e) => {
+    const onSubmit = async(e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData.entries());
-        console.log(data)
-        alert(`Form submitted with: ${JSON.stringify(data, null, 2)}`);
+        console.log(data);
+        alert(`Form submitted with`);
+
+
+        const { data: { user }, error } = await authClient.signUp.email({
+            name: data.name, // required
+            email: data.email, // required
+            password:data.password, // required
+            image: data.img_url,
+            callbackURL: "/login",
+        });
     };
+
+  
     return (
         <div className="container py-10">
             <div className="">
@@ -25,7 +37,7 @@ const SignUpPage = () => {
                         }}
                     >
                         <Label>Name</Label>
-                        <Input name="name" placeholder="John Doe" />
+                        <Input name="name" placeholder="Enter your name" />
                         <FieldError />
                     </TextField>
                     <TextField
@@ -41,6 +53,20 @@ const SignUpPage = () => {
                     >
                         <Label>Email</Label>
                         <Input name="email" placeholder="john@example.com" />
+                        <FieldError />
+                    </TextField>
+                    <TextField
+                        isRequired
+                        name="img_url"
+                        validate={(value) => {
+                            if (value.length < 3) {
+                                return "Name must be at least 3 characters";
+                            }
+                            return null;
+                        }}
+                    >
+                        <Label>Image Url</Label>
+                        <Input name="img_url" placeholder="Enter your image url" />
                         <FieldError />
                     </TextField>
                     <TextField
