@@ -17,9 +17,9 @@ const NavBar = () => {
                 </ul>
                 <ul className="flex items-center gap-4">
                     
-                    <li><CgProfile /></li>
-                    <li><Link href={'/login'}>Login</Link></li>
-                    <li><Link href={'/signup'}>Sign Up</Link></li>
+                    <li className='flex items-center justify-center' >Helo<CgProfile /></li>
+                    <li><Link className='btn' href={'/login'}>Login</Link></li>
+                    <li><Link className='btn' href={'/signup'}>Sign Up</Link></li>
                 </ul>
             </header>
         </nav>
