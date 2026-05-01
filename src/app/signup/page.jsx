@@ -11,20 +11,23 @@ const SignUpPage = () => {
         alert(`Form submitted with`);
 
 
-        const { data: { user }, error } = await authClient.signUp.email({
+        const { data:res, error } = await authClient.signUp.email({
             name: data.name, // required
             email: data.email, // required
             password:data.password, // required
             image: data.img_url,
             callbackURL: "/login",
         });
+        if (error) {
+            alert(`${error.message}`);
+        }
     };
 
   
     return (
         <div className="container py-10">
             <div className="">
-                <Form className="flex w-96 flex-col gap-4 mx-auto border border-gray-300 p-10 pt-2 shadow-md rounded-md" onSubmit={onSubmit}>
+                <Form className="flex w-11/12 md:w-3/6 lg:w-96 flex-col gap-4 mx-auto border border-gray-300 p-3 md:p-10 pt-2 shadow-md rounded-md" onSubmit={onSubmit}>
                 <h1 className="text-center font-semibold text-4xl">Sign Up</h1>
                     <TextField
                         isRequired
