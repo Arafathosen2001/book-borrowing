@@ -3,6 +3,7 @@ import Marquee from "react-fast-marquee";
 import books from "@/data/Books.json";
 import { AllBoodsData } from "@/data/fetchData";
 import BooksCard from "./Component/BooksCard";
+import { Button } from '@heroui/react';
 
 export default async function Home() {
   // console.log(books);
@@ -12,7 +13,8 @@ export default async function Home() {
   return (
     <div className="container">
       <Baner />
-      <div>All Books
+      <div className="flex justify-center items-center gap-2 my-4">
+        <button className="btn btn-secondary">Our Collection</button>
             <Marquee>
             {data.map((book) => (
               

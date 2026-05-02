@@ -16,7 +16,7 @@ const BooksCard = ({book}) => {
                 <h2 className="card-title">{book.bookName }</h2>
                 <p>{book.author} </p>
                 <div className="card-actions">
-                    <a href={`../allbooks/${book.bookId}`} className="btn btn-primary">Buy Now</a>
+                    <Link href={`../allbooks/${book.bookId}`} className="btn btn-secondary">View Details</Link>
                 </div>
             </div>
         </div>

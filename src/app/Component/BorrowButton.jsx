@@ -13,7 +13,7 @@ const BorrowButton = () => {
         alert("Borrowed is ok");
     }
     return (
-        <button onClick={() => handelButton()} className="btn btn-primary">Borrow Now</button>
+        <button onClick={() => handelButton()} className="btn btn-secondary">Borrow Now</button>
     );
 };
 

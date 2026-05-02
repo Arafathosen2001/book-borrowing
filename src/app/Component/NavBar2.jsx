@@ -45,10 +45,10 @@ const NavBar2 = () => {
                             {<img src={users?.image}
                                 width={300}
                                 height={400} alt="user" className='h-10 w-10 rounded-full' /> || <CgProfile></CgProfile>}
-                        <li><Link className='btn' href={'/profile'}>Profile</Link></li>
-                        <li><button className='btn' onClick={async () => await authClient.signOut()}>Log out</button></li>
-                    </>) : (<><li><Link className='btn' href={'/login'}>Login</Link></li>
-                        <li><Link className='px-1 md:px-4 btn' href={'/signup'}>Sign Up</Link></li></>))
+                            <li><Link className='btn btn-secondary' href={'/profile'}>Profile</Link></li>
+                            <li><button className='btn btn-secondary' onClick={async () => await authClient.signOut()}>Log out</button></li>
+                        </>) : (<><li><Link className='btn btn-secondary' href={'/login'}>Login</Link></li>
+                                <li><Link className='px-1 md:px-4 btn btn-secondary' href={'/signup'}>Sign Up</Link></li></>))
 
                     }
                 </ul>
