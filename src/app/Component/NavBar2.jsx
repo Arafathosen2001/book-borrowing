@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import { CgProfile } from 'react-icons/cg';
 import { GiBookshelf } from 'react-icons/gi';
+import NavLink from './NavLink';
 const NavBar2 = () => {
     const { data: session, status,isPending} = authClient.useSession();
     const users=session?.user;
@@ -34,14 +35,14 @@ const NavBar2 = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     
-                        <li><Link href={'/'}>Home</Link></li>
-                        <li><Link href={'/allbooks'}>All Books</Link></li>
+                        <li><NavLink href={'/'}>Home</NavLink></li>
+                        <li><NavLink href={'/allbooks'}>All Books</NavLink></li>
                    
                 </ul>
             </div>
             <div className="navbar-end">
                 <ul className="flex items-center md:gap-4 gap-2">
-                    {isPending ? (<h1>Loading...</h1>) : (users ? (<><li className='flex items-center justify-center' >Helo ! {users?.name}</li>
+                        {isPending ? (<span className="loading loading-spinner text-secondary">Loding</span>) : (users ? (<><li className='flex items-center justify-center' >Helo ! {users?.name}</li>
                             {<img src={users?.image}
                                 width={300}
                                 height={400} alt="user" className='h-10 w-10 rounded-full' /> || <CgProfile></CgProfile>}

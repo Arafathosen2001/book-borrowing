@@ -8,7 +8,7 @@ import { Button } from '@heroui/react';
 export default async function Home() {
   // console.log(books);
   const data = await AllBoodsData();
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="container">

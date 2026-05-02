@@ -10,6 +10,7 @@ const FilterBooks = ({ data }) => {
         filter === "All"
             ? data
             : data.filter((book) => book.category === filter);
+    const categories = ["All", "Science", "Tech", "Mystery", "Fiction", "Fantasy", "Classic"];
 
     return (
         <div className="">
@@ -18,14 +19,16 @@ const FilterBooks = ({ data }) => {
                     <div className="col-span-1">
                         <ul className="flex flex-col rounded-2xl shadow-2xl p-3 space-y-2 text-center">
                             <li className="text-left font-semibold text-2xl">All Categories</li>
-
-                            <li onClick={() => setFilter("All")}     className="btn bg-secondary rounded-3xl">All</li>
-                            <li onClick={() => setFilter("Science")} className="btn bg-secondary rounded-3xl">Science</li>
-                            <li onClick={() => setFilter("Tech")}    className="btn bg-secondary rounded-3xl">Tech</li>
-                            <li onClick={() => setFilter("Mystery")} className="btn bg-secondary rounded-3xl">Mystery</li>
-                            <li onClick={() => setFilter("Fiction")} className="btn bg-secondary rounded-3xl">Fiction</li>
-                            <li onClick={() => setFilter("Fantasy")} className="btn bg-secondary rounded-3xl">Fantasy</li>
-                            <li onClick={() => setFilter("Classic")} className="btn bg-secondary rounded-3xl">Classic</li>
+                        {categories.map((cat,ind) => (
+                            <li
+                                key={ind}
+                                onClick={() => setFilter(cat)}
+                                className={`btn rounded-3xl  ${filter === cat && "bg-secondary text-white"
+                                    }`}
+                            >
+                                {cat}
+                            </li>
+                        ))}
                         </ul>
                     </div>
                     <div className="col-span-3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
