@@ -18,7 +18,7 @@ const Baner = () => {
                     <p className="mb-5">
                         Open a book, open your mind, and explore endless possibilities. Discover the world of literature with our vast collection of books, and let your imagination soar.
                     </p>
-                    <Link href={'/login'} className="btn btn-primary">Browse Now</Link>
+                    <Link href={'/allbooks'} className="btn btn-primary">Browse Now</Link>
                 </div>
             </div>
         </div>

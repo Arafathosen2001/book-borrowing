@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
+import { CgGoogle } from "react-icons/cg";
 
 const LoginPage = () => {
     const onSubmit = async(e) => {
@@ -9,19 +10,27 @@ const LoginPage = () => {
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData.entries());
         // console.log(data)
-        alert(`Form submitted with`);
-        const { data: { user }, error } = await authClient.signIn.email({
+       
+        const { data: { user }, error,status } = await authClient.signIn.email({
             email: data.email, // required
             password: data.password, // required
             rememberMe: true,
             callbackURL: "/",
         });
         if (error) {
-            console.error(error);
+            alert(error.message);
             return;
+        } else {
+            alert('Login Successful');
         }
-        // console.log(user)
+        
     };
+    const handelButton = async() => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+        console.log(data)
+    }
     return (
         <div className="container py-10">
             <div className="">
@@ -70,13 +79,15 @@ const LoginPage = () => {
                         <p>Dont have an account? <Link className="btn btn-soft btn-info" href={'/signup'}>Register</Link></p>
                     </div>
                     <div className="flex gap-2">
-                        <Button type="submit">
+                        <Button fullWidth type="submit">
                             Submit
                         </Button>
-                        <Button type="reset" variant="secondary">
-                            Reset
-                        </Button>
                     </div>
+                    <div className="divider">OR</div>
+                    <Button className="w-full bg-yellow-500 text-black" onClick={handelButton} >
+                        <CgGoogle></CgGoogle>
+                        Sign in with Google
+                    </Button>
                 </Form>
             </div>
         </div>
