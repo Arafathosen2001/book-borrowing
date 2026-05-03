@@ -17,7 +17,7 @@ import { Button, Checkbox, Form, Input, InputGroup, TextArea } from "@heroui/rea
                     onSubmit={(e) => {
                         e.preventDefault();
                         const data = Object.fromEntries(new FormData(e.currentTarget));
-                        console.log("Form data:", data);
+                        // console.log("Form data:", data);
                     }}
                     className="mx-auto mt-16 flex flex-col gap-8 md:mt-24 md:max-w-120"
                 >

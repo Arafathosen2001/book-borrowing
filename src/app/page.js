@@ -3,6 +3,8 @@ import Marquee from "react-fast-marquee";
 import { AllBoodsData } from "@/data/fetchData";
 import BooksCard from "./Component/BooksCard";
 import Teame from "./Component/Teame";
+import AutoPlay from "./Component/AutoPlay";
+
 
 
 export default async function Home() {
@@ -28,6 +30,7 @@ export default async function Home() {
           <BooksCard key={book.bookId} book={book} ></BooksCard>
         ))}
       </div>
+      <AutoPlay></AutoPlay>
       <Teame></Teame>
       
     </div>

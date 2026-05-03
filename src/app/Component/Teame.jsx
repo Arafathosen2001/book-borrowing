@@ -167,7 +167,7 @@ const teamMembers = [
 
 const Teame = () => {
     return (
-        < section className = "bg-secondary py-16 md:py-24" >
+        < section className= "bg-[#f4309959] py-16 md:py-24" >
         <div className="mx-auto max-w-container px-4 md:px-8">
             <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
                 <h2 className="mt-3 text-4xl text-display-sm font-semibold text-primary md:text-display-md">Meet our team</h2>

@@ -1,7 +1,11 @@
 "use client";
-
 import { useState } from "react";
 import BooksCard from "./BooksCard";
+import Image from "next/image";
+import add1 from "../../assaest/banner11.png";
+import add2 from "../../assaest/banner21.png";
+import add3 from "../../assaest/banner31.png";
+import add4 from "../../assaest/banner41.png";
 
 const FilterBooks = ({ data }) => {
     const [filter, setFilter] = useState("All");
@@ -36,8 +40,11 @@ const FilterBooks = ({ data }) => {
                             <BooksCard key={book.bookId} book={book}></BooksCard>))
                         }
                     </div>
-                    <div className="col-span-1">
-                        <h1>Right sied</h1>
+                    <div className="col-span-1 flex flex-col space-y-5">
+                        <div className=""><Image src={add1} alt="" /></div>
+                        <div className=""><Image src={add3} alt="" /></div>
+                        <div className=""><Image src={add2} alt="" /></div>
+                        <div className=""><Image src={add4} alt="" /></div>
                     </div>
                 </div>
             </div>
