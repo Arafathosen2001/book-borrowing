@@ -1,9 +1,9 @@
 import Baner from "./Component/Baner";
 import Marquee from "react-fast-marquee";
-import books from "@/data/Books.json";
 import { AllBoodsData } from "@/data/fetchData";
 import BooksCard from "./Component/BooksCard";
-import { Button } from '@heroui/react';
+import Teame from "./Component/Teame";
+
 
 export default async function Home() {
   // console.log(books);
@@ -28,7 +28,7 @@ export default async function Home() {
           <BooksCard key={book.bookId} book={book} ></BooksCard>
         ))}
       </div>
-      
+      <Teame></Teame>
       
     </div>
   );

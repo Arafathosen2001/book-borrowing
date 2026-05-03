@@ -1,8 +1,10 @@
 "use client";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import { authClient } from "../../lib/auth-client";
+import { useRouter } from "next/navigation";
 
 const SignUpPage = () => {
+    const router = useRouter();
     const onSubmit = async(e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
@@ -16,11 +18,12 @@ const SignUpPage = () => {
             email: data.email, // required
             password:data.password, // required
             image: data.img_url,
-            callbackURL: "/login",
         });
         if (error) {
             alert(`${error.message}`);
         }
+        await authClient.signOut();
+        router.push("/login");
     };
 
   

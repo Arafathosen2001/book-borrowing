@@ -31,10 +31,13 @@ const FilterBooks = ({ data }) => {
                         ))}
                         </ul>
                     </div>
-                    <div className="col-span-3 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
                         {filteredBooks.map((book) => (
                             <BooksCard key={book.bookId} book={book}></BooksCard>))
                         }
+                    </div>
+                    <div className="col-span-1">
+                        <h1>Right sied</h1>
                     </div>
                 </div>
             </div>

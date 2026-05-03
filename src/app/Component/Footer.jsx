@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="container footer sm:footer-horizontal text-base-content p-10">
             <aside>
                 <div className="flex items-center gap-3">
-                    <Link href={'/'} variant="soft" className="outline font-bold flex items-center justify-center text-4xl"><GiBookshelf />Book <span className='text-red-500'>Fair</span></Link>
+                        <Link href={'/'} variant="soft" className="outline font-bold flex items-center justify-center text-4xl"><GiBookshelf />Book <span className='text-secondary'>Fair</span></Link>
                 </div>
                 <p>
                     by p-it.com

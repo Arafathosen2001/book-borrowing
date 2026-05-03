@@ -29,7 +29,7 @@ const LoginPage = () => {
         const data = await authClient.signIn.social({
             provider: "google",
         });
-        console.log(data)
+        // console.log(data)
     }
     return (
         <div className="container py-10">
