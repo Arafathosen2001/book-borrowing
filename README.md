@@ -1,11 +1,13 @@
-# 📚 Digital Library Web App
+# Digital Library Web App
 
 ## App Name : Book Fair
+## Live Demo
+[https://book-borrowing-eta.vercel.app/](https://book-borrowing-eta.vercel.app/)
 
 A seamless and modern web application designed to digitize the traditional library experience. Users can explore books, filter by categories, and borrow books digitally. Built with a focus on performance, security, and user experience using **Next.js, MongoDB, and BetterAuth**.
 
 ---
-## 🛠️ Built With
+## Built With
 
 - **Next.js** - The React framework for building server-rendered applications.
 - **MongoDB** - The NoSQL database for storing and managing book data.
@@ -15,12 +17,11 @@ A seamless and modern web application designed to digitize the traditional libra
 
 ---
 
-## 🌐 Live Demo
-[https://book-borrowing-eta.vercel.app/](https://book-borrowing-eta.vercel.app/)
+
 
 ---
 
-## 🎯 Purpose
+##  Purpose
 
 This project aims to replace traditional library systems with a fully digital platform where users can:
 - Browse books easily
@@ -33,20 +34,20 @@ This project aims to replace traditional library systems with a fully digital pl
 
 
 
-### 📖 Book System
+### Book System
 - Browse all books
 - View detailed book information
 - Borrow books securely
 - Category-based filtering (Story, Tech, Science)
 - Search books by title
 
-### 🔐 Authentication
+### Authentication
 - User registration & login system
 - Google OAuth login
 - Protected routes (My Profile, Book Details)
 - Secure session handling with BetterAuth
 
-### 👤 User Profile
+###  User Profile
 - View user information
 - Update profile
 

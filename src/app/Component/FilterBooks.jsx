@@ -40,7 +40,7 @@ const FilterBooks = ({ data }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
-                {/* CATEGORY */}
+             
                 <div className="col-span-1">
                     <ul className="flex flex-col rounded-2xl shadow-2xl p-3 space-y-2 text-center">
                         <li className="text-left font-semibold text-2xl">
@@ -60,7 +60,6 @@ const FilterBooks = ({ data }) => {
                     </ul>
                 </div>
 
-                {/* BOOKS */}
                 <div className="col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
                     {filteredBooks.length > 0 ? (
                         filteredBooks.map((book) => (
@@ -71,7 +70,6 @@ const FilterBooks = ({ data }) => {
                     )}
                 </div>
 
-                {/* ADS */}
                 <div className="col-span-1 flex flex-col space-y-5">
                     <Image src={add1} alt="" />
                     <Image src={add3} alt="" />
