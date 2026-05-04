@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 Digital Library Web App
 
-## Getting Started
+A seamless and modern web application designed to digitize the traditional library experience. Users can explore books, filter by categories, and borrow books digitally. Built with a focus on performance, security, and user experience using **Next.js, MongoDB, and BetterAuth**.
 
-First, run the development server:
+---
+## 🛠️ Built With
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** - The React framework for building server-rendered applications.
+- **MongoDB** - The NoSQL database for storing and managing book data.
+- **BetterAuth** - The authentication service for secure user management.
+- **Tailwind CSS** - The utility-first CSS framework for styling the application.
+- **Vercel** - The cloud platform for deploying and hosting the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🚀 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **User Authentication**: Secure login and registration using BetterAuth.
+- **Book Management**: CRUD operations for managing books in the database.
+## 🌐 Live Demo
+[https://book-borrowing-eta.vercel.app/](https://book-borrowing-eta.vercel.app/)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Purpose
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project aims to replace traditional library systems with a fully digital platform where users can:
+- Browse books easily
+- Search and filter by category
+- View detailed book information
+- Borrow books securely
+- Manage their profile
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📖 Book System
+- Browse all books
+- View detailed book information
+- Borrow books securely
+- Category-based filtering (Story, Tech, Science)
+- Search books by title
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔐 Authentication
+- User registration & login system
+- Google OAuth login
+- Protected routes (My Profile, Book Details)
+- Secure session handling with BetterAuth
+
+### 👤 User Profile
+- View user information
+- Update profile (name & image)
+- Protected profile page
+
+### Home Page
+- Hero banner ("Find Your Next Read")
+- Marquee for new arrivals
+- Featured books section
+- Extra custom sections
+
+---
+
+## Tech Stack
+
+- **Next.js**
+- **React**
+- **Tailwind CSS**
+- **DaisyUI & HeroUI**
+- **MongoDB**
+- **BetterAuth**
+- **JavaScript (ES6+)**
+
+---
+
+## NPM Packages Used
+
+- next
+- react
+- tailwindcss
+- daisyui
+- better-auth
+- mongodb
+
+---
+## 📝 Notes
+
+- The project is a Next.js app with React and Tailwind CSS.
+- The app uses MongoDB as the database.
+- The app uses BetterAuth for authentication.
+- The app uses DaisyUI for UI components.
+- The app uses HeroUI for hero banners.
+- The app uses React Hot Toast for notifications.
+- The app uses Swiper for sliders (optional requirement).
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

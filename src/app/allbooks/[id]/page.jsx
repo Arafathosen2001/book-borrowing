@@ -7,8 +7,11 @@ const BookDetiels = async ({ params }) => {
     
     const { id } = await params
     const data = await AllBoodsData(id);
-    console.log(data)
+    // console.log(data)
     const book = data.find(book => book.bookId == id);
+    if (!book) {
+        return <p>Book not found</p>;
+    }
     const { bookName, review, image, author, totalPages, rating, available_quantity, category, publisher, yearOfPublishing } = book;
    
     return (
@@ -21,11 +24,18 @@ const BookDetiels = async ({ params }) => {
                         alt="Album"
                     />
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-2 space-y-2">
                     <h2 className="font-bold text-3xl">{bookName}</h2>
-                    <p className="font-semibold text-xl">By: {author}</p>
+                    <p className="font-semibold text-xl">Author: {author}</p>
                     <p>{review}</p>
-                    <div className=" mt-20">
+                    <h1 className='font-bold text-3xl border'>Others information</h1>
+                    <p className='font-semibold text-2xl'>TotalPages: <span className='text-secondary'>{totalPages}</span></p>
+                    <p className='font-semibold text-2xl'>Category <span className='text-secondary'>{category}</span></p>
+                    <p className='font-semibold text-2xl'>Rating <span className='text-secondary'>{rating}</span></p>
+                    <p className='font-semibold text-2xl'>Publisher <span className='text-secondary'>{publisher}</span></p>
+                    <p className='font-semibold text-2xl'>YearOfPublishing <span className='text-secondary'>{yearOfPublishing}</span></p>
+                    <div className=" mt-20 flex justify-between items-center p-10">
+                    <p className='font-semibold text-2xl btn'>Available Quantity {available_quantity}</p>
                         <BorrowButton></BorrowButton>
                     </div>
                 </div>

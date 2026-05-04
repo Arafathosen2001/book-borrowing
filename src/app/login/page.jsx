@@ -3,6 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
 import { CgGoogle } from "react-icons/cg";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
     const onSubmit = async(e) => {
@@ -18,18 +19,28 @@ const LoginPage = () => {
             callbackURL: "/",
         });
         if (error) {
-            alert(error.message);
+            // alert(error.message);
+            toast.error(error.message);
             return;
         } else {
-            alert('Login Successful');
+            toast.success("Login Successfully");
+            // alert('Login Successful');
         }
         
     };
     const handelButton = async() => {
-        const data = await authClient.signIn.social({
+        const {data,error} = await authClient.signIn.social({
             provider: "google",
         });
         // console.log(data)
+        if (error) {
+            // alert(error.message);
+            toast.error(error.message);
+            return;
+        } else {
+            toast.success("Login Successfully");
+            // alert('Login Successful');
+        }
     }
     return (
         <div className="container py-10">

@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import NavBar from "./Component/NavBar";
 import Footer from "./Component/Footer";
 import NavBar2 from "./Component/NavBar2";
+import { ToastContainer } from "react-toastify";
 const inter = Inter({ subsets: ['latin'] });
 
 const geistSans = Geist({
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <NavBar2></NavBar2>
         {children}
         <Footer></Footer>
+        <ToastContainer position="top-center" />
       </body>
     </html>
   );

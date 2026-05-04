@@ -6,12 +6,13 @@ import React from 'react';
 import { CgProfile } from 'react-icons/cg';
 import { GiBookshelf } from 'react-icons/gi';
 import NavLink from './NavLink';
+import { toast } from 'react-toastify';
 const NavBar2 = () => {
     const { data: session, status,isPending} = authClient.useSession();
     const users = session?.user;
     const handelBtn = async() => {
         await authClient.signOut();
-        alert('Sign Out Successfully')
+        toast.success("Log Out Successfully");
     }
     return (
         <div className="bg-base-100 shadow-sm">
