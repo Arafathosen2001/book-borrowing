@@ -25,7 +25,7 @@ const FilterBooks = ({ data }) => {
         });
 
     return (
-        <div>
+        <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <h1 className="col-span-1 text-2xl font-bold mb-3">All Books</h1>
                 <div className="join col-span-3">

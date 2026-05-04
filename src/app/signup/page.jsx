@@ -2,6 +2,7 @@
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import { authClient } from "../../lib/auth-client";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const SignUpPage = () => {
     const router = useRouter();
@@ -9,10 +10,8 @@ const SignUpPage = () => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData.entries());
-        console.log(data);
-        alert(`Form submitted with`);
-
-
+        
+        
         const { data:res, error } = await authClient.signUp.email({
             name: data.name, // required
             email: data.email, // required
@@ -20,7 +19,9 @@ const SignUpPage = () => {
             image: data.img_url,
         });
         if (error) {
-            alert(`${error.message}`);
+            toast.error(error.message);
+        } else {
+            toast.success("Sing Up Successfully");
         }
         await authClient.signOut();
         router.push("/login");
