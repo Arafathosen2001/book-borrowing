@@ -1,5 +1,7 @@
 # 📚 Digital Library Web App
 
+## App Name : Book Fair
+
 A seamless and modern web application designed to digitize the traditional library experience. Users can explore books, filter by categories, and borrow books digitally. Built with a focus on performance, security, and user experience using **Next.js, MongoDB, and BetterAuth**.
 
 ---
@@ -13,10 +15,6 @@ A seamless and modern web application designed to digitize the traditional libra
 
 ---
 
-## 🚀 Features
-
-- **User Authentication**: Secure login and registration using BetterAuth.
-- **Book Management**: CRUD operations for managing books in the database.
 ## 🌐 Live Demo
 [https://book-borrowing-eta.vercel.app/](https://book-borrowing-eta.vercel.app/)
 
@@ -50,14 +48,14 @@ This project aims to replace traditional library systems with a fully digital pl
 
 ### 👤 User Profile
 - View user information
-- Update profile (name & image)
-- Protected profile page
+- Update profile
 
 ### Home Page
-- Hero banner ("Find Your Next Read")
-- Marquee for new arrivals
+- Hero banner
+- Marquee for Books name
 - Featured books section
-- Extra custom sections
+- A adds slider
+- Meet our team
 
 ---
 
@@ -71,30 +69,3 @@ This project aims to replace traditional library systems with a fully digital pl
 - **BetterAuth**
 - **JavaScript (ES6+)**
 
----
-
-## NPM Packages Used
-
-- next
-- react
-- tailwindcss
-- daisyui
-- better-auth
-- mongodb
-
----
-## 📝 Notes
-
-- The project is a Next.js app with React and Tailwind CSS.
-- The app uses MongoDB as the database.
-- The app uses BetterAuth for authentication.
-- The app uses DaisyUI for UI components.
-- The app uses HeroUI for hero banners.
-- The app uses React Hot Toast for notifications.
-- The app uses Swiper for sliders (optional requirement).
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
