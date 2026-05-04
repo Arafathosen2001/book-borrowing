@@ -8,7 +8,6 @@ const db = client.db('book-fair');
 export const auth = betterAuth({
     emailAndPassword: { 
     enabled: true, 
-    requireEmailVerification: false
   },
 
   socialProviders: {
@@ -21,6 +20,4 @@ export const auth = betterAuth({
     // Optional: if you don't provide a client, database transactions won't be enabled.
     client
   }),
-  secret: process.env.BETTER_AUTH_SECRET,
-  baseURL: process.env.BETTER_AUTH_URL,
 });

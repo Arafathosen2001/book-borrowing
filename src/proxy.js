@@ -1,32 +1,23 @@
 import { NextResponse } from 'next/server'
 import { auth } from './lib/auth'
 import { headers } from 'next/headers'
-
+ 
+// This function can be marked `async` if using `await` inside
 export async function proxy(request) {
+    const session = await auth.api.getSession({
+        headers: await headers()
+    })
+    console.log(session)
 
-  const { pathname } = request.nextUrl;
-
-
-  if (pathname.startsWith('/api/auth')) {
-    return NextResponse.next();
-  }
-
-
-  if (pathname === '/login' || pathname === '/signup') {
-    return NextResponse.next();
-  }
-
-  const session = await auth.api.getSession({
-    headers: await headers()
-  });
-
-  if (session) {
-    return NextResponse.next();
-  }
-
-  return NextResponse.redirect(new URL('/login', request.url));
+    if (session) {
+        return NextResponse.next()
+    }
+  return NextResponse.redirect(new URL('/login', request.url))
 }
-
+ 
+// Alternatively, you can use a default export:
+// export default function proxy(request) { ... }
+ 
 export const config = {
-  matcher: ['/allbooks', '/allbooks/:slug'],
-};
+  matcher: ['/allbooks','/allbooks/:slug'],
+}
