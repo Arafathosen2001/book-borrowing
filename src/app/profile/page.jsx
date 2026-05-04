@@ -23,7 +23,7 @@ const ProfilePage = () => {
     };
     return (
         <div className='my-24'>
-            <div className="mx-auto card bg-base-100 w-96 shadow-sm">
+            <div className="mx-auto card bg-base-100 md:w-96 w-full shadow-sm">
             <h1 className='text-2xl font-semibold text-center'>Your Profile</h1>
                 <div className="relative">
                     <figure className=''>

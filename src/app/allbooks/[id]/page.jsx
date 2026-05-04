@@ -34,8 +34,8 @@ const BookDetiels = async ({ params }) => {
                     <p className='font-semibold text-2xl'>Rating <span className='text-secondary'>{rating}</span></p>
                     <p className='font-semibold text-2xl'>Publisher <span className='text-secondary'>{publisher}</span></p>
                     <p className='font-semibold text-2xl'>YearOfPublishing <span className='text-secondary'>{yearOfPublishing}</span></p>
-                    <div className=" mt-20 flex justify-between items-center p-10">
-                    <p className='font-semibold text-2xl btn'>Available Quantity {available_quantity}</p>
+                    <div className=" mt-20 flex flex-col md:flex-col lg:flex-row justify-between items-center p-10 gap-3">
+                        <p className='font-semibold text-sm md:text-2xl btn'>Available Quantity <span className='text-secondary'>{available_quantity}</span></p>
                         <BorrowButton></BorrowButton>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ const NavBar2 = () => {
     }
     return (
         <div className="bg-base-100 shadow-sm">
-        <div className="navbar container px-2 lg:px-0 ">
+        <div className="navbar container px-2 lg:px-0  ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,11 +27,13 @@ const NavBar2 = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         
                             <li><Link href={'/'} variant="soft" className="outline font-bold flex items-center justify-start text-2xl"><GiBookshelf />Book <span className='text-secondary'>Fair</span></Link></li>
+                            
+            
                             <li><NavLink href={'/'}>Home</NavLink></li>
                             <li><NavLink href={'/allbooks'}>All Books</NavLink></li>
-                            <li><NavLink href={'/allbooks'}>Contuct Us</NavLink></li>
+                            <li><NavLink href={'/contactus'}>Contuct Us</NavLink></li>
+                        </ul>
                         
-                    </ul>
                     
                 </div>
                 <div className="flex items-center gap-3 hidden lg:flex">
@@ -47,12 +49,12 @@ const NavBar2 = () => {
                    
                 </ul>
             </div>
-            <div className="navbar-end">
+                <div className="navbar-end ">
                 <ul className="flex items-center md:gap-4 gap-2">
-                        {isPending ? (<span className="loading loading-spinner text-secondary"></span>) : (users ? (<><li className='flex items-center justify-center' ><span className='text-secondary'>Hello !  </span>  {users?.name}</li>
+                        {isPending ? (<span className="loading loading-spinner text-secondary"></span>) : (users ? (<><li className='hidden md:flex flex-row items-center justify-center ' ><span className='text-secondary'>Hello !  </span>  {users?.name}</li>
                             {<img src={users?.image}
                                 width={300}
-                                height={400} alt="user" className='h-10 w-10 rounded-full' /> || <CgProfile></CgProfile>}
+                                height={400} alt="user" className='hidden h-10 w-10 rounded-full md:flex' /> || <CgProfile></CgProfile>}
                             <li><Link className='btn btn-secondary' href={'/profile'}>Profile</Link></li>
                             <li><button className='btn btn-secondary' onClick={handelBtn}>Log out</button></li>
                         </>) : (<><li><Link className='btn btn-secondary' href={'/login'}>Login</Link></li>

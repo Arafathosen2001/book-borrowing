@@ -25,7 +25,7 @@ export default async function Home() {
             ))}
           </Marquee>
       </div>
-      <div className="flex justify-center items-center gap-3 my-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-5">
         {data.slice(0,4).map((book) => (
           <BooksCard key={book.bookId} book={book} ></BooksCard>
         ))}
