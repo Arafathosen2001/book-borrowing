@@ -8,6 +8,7 @@ const db = client.db('book-fair');
 export const auth = betterAuth({
     emailAndPassword: { 
     enabled: true, 
+    requireEmailVerification: false
   },
 
   socialProviders: {
