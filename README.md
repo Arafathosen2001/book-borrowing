@@ -33,7 +33,7 @@ This project aims to replace traditional library systems with a fully digital pl
 
 ---
 
-## 🚀 Key Features
+
 
 ### 📖 Book System
 - Browse all books
