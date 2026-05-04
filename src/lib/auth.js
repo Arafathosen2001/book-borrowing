@@ -9,9 +9,7 @@ export const auth = betterAuth({
     emailAndPassword: { 
     enabled: true, 
   },
-  signUp: {
-  autoSignIn: false
-},
+
   socialProviders: {
         google: { 
             clientId: process.env.GOOGLE_CLIENT_ID, 
